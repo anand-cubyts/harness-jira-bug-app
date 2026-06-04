@@ -28,9 +28,14 @@ export default function AgentTable({ agents, isLoading, onDeleteAgent }) {
               <td>{agent.status}</td>
               <td>{agent.environment}</td>
               <td>
-                <button className="danger-button" onClick={() => onDeleteAgent(agent.id)}>
-                  Delete
-                </button>
+                <div className="table-actions">
+                  <button className="secondary-button" type="button">
+                    Run
+                  </button>
+                  <button className="danger-button" onClick={() => onDeleteAgent(agent.id)}>
+                    Delete
+                  </button>
+                </div>
               </td>
             </tr>
           ))}
