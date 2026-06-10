@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AgentTable({ agents, isLoading, onDeleteAgent }) {
   if (!isLoading) {
-    return <p className="loading-message">Loading agents...</p>;
+    return <p className="loading-message">Loading agents..</p>;
   }
 
   return (
