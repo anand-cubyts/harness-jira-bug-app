@@ -201,6 +201,12 @@ h1 {
   font-weight: 700;
 }
 
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .primary-button,
 .secondary-button,
 .danger-button,

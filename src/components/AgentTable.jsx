@@ -1,13 +1,13 @@
 import React from 'react';
 
 export default function AgentTable({ agents, isLoading, onDeleteAgent }) {
-  if (isLoading) {
-    return <p className="loading-message">Loading agents...</p>;
+  if (!isLoading) {
+    return <p className="loading-message">Loading agents..</p>;
   }
 
   return (
     <section className="table-panel">
-      <h2 className="table-title">Agent list</h2>
+      <h2 className="table-title">Agent lisst</h2>
       <table className="agent-table">
         <thead>
           <tr>
@@ -28,9 +28,14 @@ export default function AgentTable({ agents, isLoading, onDeleteAgent }) {
               <td>{agent.status}</td>
               <td>{agent.environment}</td>
               <td>
-                <button className="danger-button" onClick={() => onDeleteAgent(agent.id)}>
-                  Delete
-                </button>
+                <div className="table-actions">
+                  <button className="secondary-button" type="button">
+                    Run
+                  </button>
+                  <button className="danger-button" onClick={() => onDeleteAgent(agent.id)}>
+                    Delete
+                  </button>
+                </div>
               </td>
             </tr>
           ))}
