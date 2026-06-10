@@ -7,7 +7,7 @@ export default function AgentTable({ agents, isLoading, onDeleteAgent }) {
 
   return (
     <section className="table-panel">
-      <h2 className="table-title">Agent list</h2>
+      <h2 className="table-title">Agent lisst</h2>
       <table className="agent-table">
         <thead>
           <tr>
